@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Rose Day Jeel 🌹</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', cursive, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .card {
+      background: #ffe6f0;
+      border-radius: 25px;
+      padding: 25px;
+      max-width: 420px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+      position: relative;
+      animation: pop 1s ease;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.85); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    h1 {
+      color: #e60073;
+      margin-bottom: 10px;
+    }
+
+    .rose {
+      font-size: 60px;
+      animation: float 2s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .photo img {
+      width: 100%;
+      border-radius: 20px;
+      margin-bottom: 15px;
+      object-fit: cover;
+      border: 3px solid #ffb3d9;
+      box-shadow: 0 0 20px rgba(255,105,180,0.6);
+    }
+
+    .photo img.vertical {
+      height: 420px;
+    }
+
+    .photo img.horizontal {
+      height: 220px;
+    }
+
+    .name-tag {
+      font-size: 20px;
+      font-weight: bold;
+      color: #e60073;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #7a003c;
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    button {
+      background: #ff4d94;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #e60073;
+    }
+
+    #msg {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #b30059;
+    }
+
+    .hearts span {
+      position: fixed;
+      bottom: -10vh;
+      font-size: 20px;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-110vh); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>Happy Rose Day Jeel 🌹</h1>
+    <div class="rose">🌹</div>
+
+    <div class="photo">
+      <div class="name-tag">Jeel 💕 Siddharth</div>
+      <img src="photo-vertical.jpg" class="vertical" alt="Us standing together">
+      <img src="photo-horizontal.jpg" class="horizontal" alt="Us together">
+    </div>
+
+    <p>
+      To <strong>Jeel 💖</strong>,<br>
+      Every rose reminds me of you — beautiful, soft, and full of love.
+      This little card is just for you 🌸
+    </p>
+
+    <button onclick="showMessage()">Tap to Reveal a Secret 💌</button>
+
+    <div id="msg" contenteditable="true">
+      tum mere liye bohot special ho 😁😁<br>
+      tum muje bohot special feel karati ho 🥺🥺<br>
+      tum mere liye ghr ho 🫂🫂<br>
+      tumhari kushiyo ko kisi ki nazar na lage 🧿🧿
+    </div>
+
+    <p style="margin-top:20px;color:#b30059;font-weight:bold;">
+      — Yours always, Siddharth 💕
+    </p>
+  </div>
+
+  <!-- Floating Hearts -->
+  <div class="hearts">
+    <span style="left:10%">💖</span>
+    <span style="left:30%">💕</span>
+    <span style="left:50%">💗</span>
+    <span style="left:70%">💞</span>
+    <span style="left:90%">💘</span>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById("msg").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
